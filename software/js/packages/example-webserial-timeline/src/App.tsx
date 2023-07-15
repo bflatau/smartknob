@@ -11,6 +11,7 @@ import {groupBy, parseInt} from 'lodash'
 import _ from 'lodash'
 import {SmartKnobWebSerial} from 'smartknobjs-webserial'
 import './index.css'
+import {Lego} from './lego'
 
 const MIN_ZOOM = 0.01
 const MAX_ZOOM = 60
@@ -462,6 +463,8 @@ export const App: React.FC<AppProps> = ({info}) => {
                         </Typography>
                     )}
                     {/* <pre>{JSON.stringify(smartKnobConfig, undefined, 2)}</pre> */}
+
+                    <Lego benTest={playbackState.currentFrame} />
                 </Paper>
             </Container>
         </>
